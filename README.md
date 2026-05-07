@@ -50,10 +50,11 @@ This project presents a comprehensive comparison between two mainstream approach
 
 ## 📊 Results & Visualization
 Experiments successfully completed!
-- **Approach 1 (SVM)**: 72% Accuracy
-- **Approach 2 (E2E)**: 75% Accuracy
+- **Top Performer**: **MobileNetV2 + SVM** (97.5% Accuracy)
+- **EfficientNetB0 (E2E)**: 75% Accuracy
 
 All plots, including confusion matrices and learning curves, are available in the `results/` folder.
 
 ## 📝 Authors
-Developed for University Deep Learning Course.
+**Students**: Ahmed Tarek, Yousef Wael, Ziad Hamdy  
+**College**: AAST (Arab Academy for Science, Technology & Maritime Transport)

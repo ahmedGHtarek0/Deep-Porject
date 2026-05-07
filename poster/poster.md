@@ -2,8 +2,8 @@
 
 ## Header
 **Title**: Comparative Study: End-to-End Deep Learning vs. Feature Extraction with ML  
-**Student Name**: [Your Name] | **Course**: Deep Learning 2026  
-**University**: [Your University]
+**Students**: Ahmed Tarek, Yousef Wael, Ziad Hamdy  
+**Course**: Deep Learning 2026 | **College**: AAST
 
 ---
 
@@ -33,9 +33,9 @@ Comparing two methodologies for medical image classification using pre-trained E
 
 ## Column 3: Results & Comparison
 ### 📊 Key Findings
-- **Accuracy**: Approach 1 (SVM) achieved high stability on small samples.
-- **Inference**: Approach 1 is 1.5x faster in training phase.
-- **Learning Curves**: Showed smooth convergence for E2E models.
+- **Top Performer**: **MobileNetV2 + SVM** achieved a staggering **97.5% Accuracy** on Brain MRI.
+- **Efficiency**: MobileNetV2 proved faster and more accurate than EfficientNet for this dataset.
+- **Stability**: Feature Extraction with SVM provided higher precision (97.5%) compared to End-to-End fine-tuning.
 
 ### 📈 Recommendation
 Use **MobileNetV2 + SVM** for resource-constrained edge devices in clinical settings.

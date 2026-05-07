@@ -1,0 +1,5 @@
+Dataset,Model,Approach,Accuracy,F1-Score
+brain_tumor,EfficientNetB0,Feature Extraction + SVM,0.72,0.6961805555555556
+brain_tumor,EfficientNetB0,End-to-End CNN,0.75,0.75
+brain_tumor,MobileNetV2,Feature Extraction + SVM,0.975,0.9749843652282677
+brain_tumor,MobileNetV2,End-to-End CNN,0.9513888955116272,0.9513888955116272

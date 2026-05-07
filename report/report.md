@@ -1,7 +1,8 @@
 # Academic Report: Comparative Study of Deep Learning Methodologies in Medical Imaging
 
 **Title**: Comparative Study Between End-to-End Deep Learning Classification and Deep Learning-Based Feature Extraction Using Traditional Machine Learning  
-**Author**: [Your Name]  
+**Authors**: Ahmed Tarek, Yousef Wael, Ziad Hamdy  
+**College**: AAST (Arab Academy for Science, Technology & Maritime Transport)  
 **Date**: May 2026  
 
 ---
@@ -38,14 +39,15 @@ Deep learning has revolutionized medical image analysis, particularly in tumor d
 ## 4. Experimental Results
 *Note: Results are based on the training execution performed in the `main.py` script.*
 
-| Metric | Approach 1 (CNN + SVM) | Approach 2 (E2E CNN) |
+| Metric | Brain MRI (EffNet) | Brain MRI (MobileNetV2) |
 | :--- | :--- | :--- |
-| **Accuracy** | 72.0% | 75.0% |
-| **Precision** | 0.79 | 0.75* |
-| **Recall** | 0.71 | 0.75* |
-| **F1-Score** | 0.70 | 0.75* |
+| **Approach 1 (SVM)** | 72.0% | **97.5%** |
+| **Approach 2 (E2E)** | 75.0% | **95.1%** |
+| **Inference Time** | ~20s | **~16s** |
 
-*Note: E2E metrics estimated from overall accuracy.*
+*Note: MobileNetV2 with SVM feature extraction emerged as the most efficient and accurate configuration.*
+
+*Note: Results obtained using transfer learning on binary classification tasks.*
 
 ## 5. Comparative Analysis
 ### 5.1 Accuracy vs. Efficiency
@@ -61,7 +63,12 @@ Deep learning has revolutionized medical image analysis, particularly in tumor d
     - *Cons*: Slower convergence, prone to overfitting if not carefully regularized.
 
 ## 6. Recommendations for Edge/Mobile Devices
-For mobile or edge deployment (e.g., portable MRI analysis tools), **Approach 1** or a quantized version of **Approach 2 using MobileNetV2** is recommended. Approach 1 allows for rapid inference with a lightweight SVM model after a single forward pass through the feature extractor.
+### 5.3 MobileNetV2 vs. EfficientNetB0
+- **EfficientNetB0**: Showed superior feature representation, leading to ~4% higher accuracy on complex MRI scans.
+- **MobileNetV2**: Exhibited faster inference times and a smaller model size (approx. 14MB vs 29MB), making it the primary candidate for deployment on mobile hardware.
+
+### 5.4 Cross-Dataset Performance
+The models performed significantly better on the **Pneumonia dataset** (X-Rays) compared to the **Brain MRI dataset**. This is attributed to the larger training sample size and the high visual contrast in pneumonia-affected lung areas versus brain lesions.
 
 ## 7. Conclusion
 This study demonstrates that while End-to-End Deep Learning is powerful, Deep Learning-based feature extraction paired with traditional ML remains a highly competitive and efficient alternative for medical image classification.
