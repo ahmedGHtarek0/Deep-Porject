@@ -1,0 +1,3 @@
+Model,Approach,Accuracy,Precision,Recall,F1-Score
+EfficientNetB0,Feature Extraction + SVM,0.72,0.7872807017543859,0.7099358974358975,0.6961805555555556
+EfficientNetB0,End-to-End CNN,0.75,0.0,0.0,0.0

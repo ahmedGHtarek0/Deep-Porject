@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+env/
+venv/
+.env
+
+# Datasets & Models
+dataset/
+models/*.h5
+models/*.pkl
+.cache/
+
+# Results (optional to ignore, but usually we want to keep them for university projects)
+# results/
+
+# IDEs
+.vscode/
+.idea/
