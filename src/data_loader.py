@@ -9,12 +9,23 @@ class DataLoader:
         self.batch_size = batch_size
         self.dataset_root = 'dataset'
 
-    def download_datasets(self):
+    def download_datasets(self, retries=3):
         print("Downloading datasets from Kaggle...")
+        
+        def download_with_retry(handle):
+            for i in range(retries):
+                try:
+                    return kagglehub.dataset_download(handle)
+                except Exception as e:
+                    if i < retries - 1:
+                        print(f"  Attempt {i+1} failed: {e}. Retrying...")
+                    else:
+                        raise e
+
         # Brain Tumor MRI
-        brain_path = kagglehub.dataset_download("masoudnickparvar/brain-tumor-mri-dataset")
+        brain_path = download_with_retry("masoudnickparvar/brain-tumor-mri-dataset")
         # Chest X-Ray
-        pneumonia_path = kagglehub.dataset_download("paultimothymooney/chest-xray-pneumonia")
+        pneumonia_path = download_with_retry("paultimothymooney/chest-xray-pneumonia")
         
         return brain_path, pneumonia_path
 

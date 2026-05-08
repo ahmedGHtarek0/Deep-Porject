@@ -15,6 +15,10 @@ def main():
         brain_dir = loader.prepare_brain_data(brain_raw)
         print(f"Brain MRI ready at: {brain_dir}")
         
+        print("Reorganizing Pneumonia dataset...")
+        pneumonia_dir = loader.prepare_pneumonia_data(pneumonia_raw)
+        print(f"Pneumonia ready at: {pneumonia_dir}")
+        
         print("\nAll datasets downloaded and prepared successfully!")
         print("You can now run 'python main.py' to start the experiments.")
         
