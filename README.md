@@ -14,19 +14,22 @@ This project presents a comprehensive comparison between two mainstream approach
 - **Frameworks**: TensorFlow, Keras, Scikit-learn, OpenCV.
 - **Evaluation**: Professional confusion matrices, learning curves, and comparative bar charts.
 
-## 📁 Project Structure
-```text
-├── dataset/             # Raw and processed datasets
-├── models/              # Saved model weights
-├── results/             # Plots and metrics
-├── report/              # Professional academic report
-├── src/                 # Modular source code
-│   ├── data_loader.py   # Preprocessing & augmentation
-│   ├── model_factory.py # CNN architectures
-│   └── evaluator.py     # Visualization tools
-├── main.py              # Main execution script
-└── requirements.txt     # Dependencies
-```
+## 📁 Project Structure & File Descriptions
+
+### 🚀 Core Execution
+*   **`main.py`**: The "engine" of the project. It automates the entire experiment suite. It iterates through different datasets (Brain Tumor, Pneumonia) and architectures (EfficientNet, MobileNet), executes both the Hybrid (SVM) and End-to-End (CNN) approaches, saves the results, and generates final comparison charts.
+
+### 📦 Source Code (`src/`)
+*   **`data_loader.py`**: Handles downloading, organizing, resizing (224x224), normalizing, and augmenting image data.
+*   **`model_factory.py`**: Defines the Deep Learning architectures and builds the End-to-End models with specific hyperparameters (Adam, 1e-4 LR).
+*   **`feature_extractor.py`**: Manages the extraction of high-level features from CNNs and training of ML classifiers like **SVM**.
+*   **`evaluator.py`**: The visualization tool for creating Confusion Matrices, Learning Curves, and Bar Charts.
+*   **`utils.py`**: Helper functions for logging progress and managing folders.
+
+### 📊 Results & Output
+*   **`results/`**: Stores all generated plots (`.png`) and the final `full_comparison_metrics.csv`.
+*   **`presentation/`**: Contains the `presentation.md` file for your project defense.
+*   **`dataset/`**: Stores the raw and processed image data.
 
 ## 🚀 Getting Started
 1. **Clone the repository**:
